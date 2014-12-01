@@ -495,13 +495,12 @@
         },
 
         makeGraphs_: function(model) {
-
-            // FIXME: make all element references relative to this.$element.
-            var mainChart = this.mainChart = dc.compositeChart("#main");
+            
+            var mainChart = this.mainChart = dc.compositeChart(this.$element.find("#primary")[0]);
             var mainMetricChart;
             var derivedMetricChart;
 
-            var $rangeSelector = $("#range-selector");
+            var $rangeSelector = this.$element.find("#range-selector");
             model.ranges().forEach(function(r) {
                 var name = r.name;
                 var range = r.range;            
@@ -569,11 +568,15 @@
 
             mainChart.xAxis().tickFormat(d3.time.format("%Y-%m-%d"))
 
-            this.initializeDropdown($("#main-metric-selector"), model.mainMetrics(), 
+            this.initializeDropdown(
+                this.$element.find("#main-metric-selector"),
+                model.mainMetrics(),
                 model.mainMetric(),
                 function(d) { model.mainMetric(d); });
 
-            this.initializeDropdown($("#derived-metric-selector"), model.derivedMetrics(),
+            this.initializeDropdown(
+                this.$element.find("#derived-metric-selector"),
+                model.derivedMetrics(),
                 model.derivedMetric(),
                 function(d) { model.derivedMetric(d); });
 
@@ -581,7 +584,7 @@
 
                 g = g[0];
 
-                var $secondary = $("#secondary");
+                var $secondary = $(this.$element.find("#secondary")[0]);
 
                 var useLinearChart = true;
 
@@ -624,8 +627,7 @@
                 },
 
                 redraw: function() {
-                    var top = View.model.topEntries(40);
-                    View.updateTable(top);
+                    View.updateTable();
                 }
             });
 
@@ -641,12 +643,14 @@
 
         },
 
-        updateTable: function(data) {
+        updateTable: function() {
 
-            // FIXME: make this relative
-            var thead = d3.select("thead");
+            var data = this.model.topEntries(40);
+            var table = d3.select(this.$element.find('#table')[0]);
+
+            var thead = table.select("thead");
             thead.select("th").text(this.model.mainMetric().name);
-            var tbody = d3.select("tbody");
+            var tbody = table.select("tbody");
  
             var rows = tbody.selectAll("tr").data(data);
     
@@ -672,19 +676,19 @@
                 cells.text(function(d) { return d; });
 
             } else {
-            // This does not really work. 'd' appears to be right for
-            // extra rows, but for rows that already exist it is
-            // equal to previous data. I could not find satisfactory
-            // explanation what the 'd' parameter is.
-            var cells = rows.selectAll("td").text(function(d, i) {
-                if (i == 0) {
-                    return d.name;
-                } else {
-                    return d.count;
-                }
-            });
+                // This does not really work. 'd' appears to be right for
+                // extra rows, but for rows that already exist it is
+                // equal to previous data. I could not find satisfactory
+                // explanation what the 'd' parameter is.
+                var cells = rows.selectAll("td").text(function(d, i) {
+                    if (i == 0) {
+                        return d.name;
+                    } else {
+                        return d.count;
+                    }
+                });
 
-            cells.text(function(d) { return d; });
+                cells.text(function(d) { return d; });
             }
    
             rows.exit().remove();
