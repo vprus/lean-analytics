@@ -1,0 +1,41 @@
+{
+  "name": "lean-analytics",
+  "main": "lean-analytics.js",
+  "version": "1.0.0",
+  "authors": [
+    "Vladimir Prus <vladimir.prus@gmail.com>"
+  ],
+  "description": "Quickly visualize and explore time series data",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "time",
+    "series",
+    "data",
+    "analysis"
+  ],
+  "license": "MIT",
+  "homepage": "http://vprus.github.io/lean-analytics",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "fontawesome": "~4.2.0",
+    "underscore": "~1.7.0",
+    "backbone": "~1.1.2",
+    "d3": "~3.4.13",
+    "dc.js": "https://github.com/vprus/dc.js.git",
+    "moment": "~2.8.3",
+    "jstat": "~1.0.6",
+    "regression-js": "https://github.com/Tom-Alexander/regression-js.git#08bf4ee"
+  }
+}

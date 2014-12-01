@@ -1,0 +1,19 @@
+{
+  "name": "lean-analytics",
+  "version": "0.9.0",
+  "description": "Quickly visualize and explore time series data",
+  "main": "lean-analytics.js",
+  "author": "Vladimir Prus <vladimir.prus@gmail.com>",
+  "license": "MIT",
+  "repository": "vprus/lean-analytics.git",
+  "browserify": {
+    "transform": [
+      "debowerify"
+    ]
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "browserify": "^6.3.2",
+    "vinyl-source-stream": "^1.0.0"
+  }
+}

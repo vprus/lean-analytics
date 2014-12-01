@@ -1,0 +1,12 @@
+
+.time-selector {
+    width: 100%;
+}
+
+#view-selector > div {
+    display: inline-block;
+}
+
+div.la table td:first-child {
+	text-align: right;
+}
