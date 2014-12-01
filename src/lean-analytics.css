@@ -1,6 +1,13 @@
 
-.time-selector {
-    width: 100%;
+.la.time-selector {
+	position: relative;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+.la.time-selector #range-selector {
+	position: absolute;
+	right: 0;
 }
 
 #view-selector > div {
