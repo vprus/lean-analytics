@@ -1,0 +1,4640 @@
+[
+    {
+        "t": "2013-03-29T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-08T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 450,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-12T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-13T10:00:00.000Z",
+        "name": "Victoria",
+        "value": 2400,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-04-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 480,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-20T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-20T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1750,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-04-23T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-23T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-23T10:00:00.000Z",
+        "name": "Gas Station 1",
+        "value": 650,
+        "category": "Car"
+    },
+    {
+        "t": "2014-03-27T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 800,
+        "category": "Car"
+    },
+    {
+        "t": "2014-03-29T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-03-29T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-03-29T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1600,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-03-30T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-03-29T10:00:00.000Z",
+        "name": "Obi",
+        "value": 250,
+        "category": "Home"
+    },
+    {
+        "t": "2014-04-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-06T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 200,
+        "category": "Home"
+    },
+    {
+        "t": "2014-04-05T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1750,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-04-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-09T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-12T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2450,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-04-12T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 750,
+        "category": "Car"
+    },
+    {
+        "t": "2014-04-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 510,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-16T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-19T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2550,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-04-20T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 50,
+        "category": "Home"
+    },
+    {
+        "t": "2014-04-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-24T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-25T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-28T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-27T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 850,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-07-28T10:00:00.000Z",
+        "name": "Obi",
+        "value": 350,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-28T10:00:00.000Z",
+        "name": "Obi",
+        "value": 1200,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-27T10:00:00.000Z",
+        "name": "Obi",
+        "value": 250,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-28T10:00:00.000Z",
+        "name": "Obi",
+        "value": 7550,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-28T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 850,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-28T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 900,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-29T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-29T10:00:00.000Z",
+        "name": "Gas Station 1",
+        "value": 900,
+        "category": "Car"
+    },
+    {
+        "t": "2013-07-29T10:00:00.000Z",
+        "name": "Obi",
+        "value": 350,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-30T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-30T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-31T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-31T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-31T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-31T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-01T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 420,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-01T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 200,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-01T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-01T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-01T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-02T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 800,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-08-02T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 950,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-02T10:00:00.000Z",
+        "name": "Obi",
+        "value": 200,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-02T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-02T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-03T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-04T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-04T10:00:00.000Z",
+        "name": "Obi",
+        "value": 1050,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-03T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 450,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-05T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 500,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-08-05T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 850,
+        "category": "Car"
+    },
+    {
+        "t": "2013-08-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-05T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 200,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-06T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-06T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 100,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-10T10:00:00.000Z",
+        "name": "Obi",
+        "value": 700,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-13T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-13T10:00:00.000Z",
+        "name": "Obi",
+        "value": 250,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-14T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-15T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-16T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 700,
+        "category": "Car"
+    },
+    {
+        "t": "2013-08-16T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 550,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-08-15T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 400,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-16T10:00:00.000Z",
+        "name": "Obi",
+        "value": 550,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-16T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-18T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 450,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-18T10:00:00.000Z",
+        "name": "Obi",
+        "value": 1000,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-18T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-19T10:00:00.000Z",
+        "name": "Obi",
+        "value": 250,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-18T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 1950,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-20T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-20T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-21T10:00:00.000Z",
+        "name": "Obi",
+        "value": 300,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-22T10:00:00.000Z",
+        "name": "Victoria",
+        "value": 450,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-08-22T10:00:00.000Z",
+        "name": "Obi",
+        "value": 250,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-22T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-23T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 500,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-08-23T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-24T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 2700,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-25T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 300,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-25T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 400,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-25T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 550,
+        "category": "Home"
+    },
+    {
+        "t": "2014-07-27T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-27T10:00:00.000Z",
+        "name": "Obi",
+        "value": 750,
+        "category": "Home"
+    },
+    {
+        "t": "2014-07-28T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-29T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-29T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-31T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 450,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-31T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-01T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 3250,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-07-31T10:00:00.000Z",
+        "name": "Gas Station 1",
+        "value": 100,
+        "category": "Car"
+    },
+    {
+        "t": "2014-08-01T10:00:00.000Z",
+        "name": "Obi",
+        "value": 200,
+        "category": "Home"
+    },
+    {
+        "t": "2014-08-01T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 30,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-01T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-01T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-02T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-03T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 300,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-08-02T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2014-08-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-04T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-04T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-04T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-05T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 700,
+        "category": "Car"
+    },
+    {
+        "t": "2014-08-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-07T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-08T10:00:00.000Z",
+        "name": "Victoria",
+        "value": 2300,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-08-08T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 30,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-08T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-09T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-09T10:00:00.000Z",
+        "name": "Victoria",
+        "value": 300,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-08-09T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 250,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-08-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-12T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-15T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1700,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-08-15T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 100,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-08-15T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-15T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-15T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-17T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 200,
+        "category": "Home"
+    },
+    {
+        "t": "2014-08-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-19T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-20T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2014-08-20T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-22T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2100,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-08-22T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2014-08-22T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-22T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-24T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 50,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-08-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-23T10:00:00.000Z",
+        "name": "Gas Station 1",
+        "value": 700,
+        "category": "Car"
+    },
+    {
+        "t": "2014-08-25T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-27T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-27T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-29T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 480,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-30T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2400,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-12-01T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-07T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-08T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 3050,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-12-08T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 450,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-14T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-15T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2700,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-12-15T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 450,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-20T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-22T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 2400,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-12-22T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-21T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 800,
+        "category": "Home"
+    },
+    {
+        "t": "2013-12-22T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 250,
+        "category": "Home"
+    },
+    {
+        "t": "2013-02-01T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-02-03T10:00:00.000Z",
+        "name": "Gas Station 1",
+        "value": 850,
+        "category": "Car"
+    },
+    {
+        "t": "2013-02-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-02-08T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-02-10T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-02-10T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1250,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-02-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-02-15T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-02-16T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2100,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-02-20T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 390,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-02-25T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 420,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-25T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-26T10:00:00.000Z",
+        "name": "Obi",
+        "value": 300,
+        "category": "Home"
+    },
+    {
+        "t": "2014-01-26T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-30T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 100,
+        "category": "Home"
+    },
+    {
+        "t": "2014-01-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-30T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-31T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-08T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2050,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-02-10T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 500,
+        "category": "Car"
+    },
+    {
+        "t": "2014-02-10T10:00:00.000Z",
+        "name": "Service 1",
+        "value": 4300,
+        "category": "Car"
+    },
+    {
+        "t": "2014-02-10T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-11T10:00:00.000Z",
+        "name": "Service 1",
+        "value": 1200,
+        "category": "Car"
+    },
+    {
+        "t": "2014-02-11T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 750,
+        "category": "Car"
+    },
+    {
+        "t": "2014-02-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 360,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-14T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-16T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 550,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-02-15T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-15T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 2050,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-02-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-15T10:00:00.000Z",
+        "name": "Gas Station 1",
+        "value": 850,
+        "category": "Car"
+    },
+    {
+        "t": "2014-02-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-19T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-22T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-22T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1950,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-02-23T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-02-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 390,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-26T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 420,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-29T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-12-30T10:00:00.000Z",
+        "name": "Victoria",
+        "value": 2450,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-01-09T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 510,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-01-13T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 400,
+        "category": "Home"
+    },
+    {
+        "t": "2013-01-13T10:00:00.000Z",
+        "name": "Obi",
+        "value": 450,
+        "category": "Home"
+    },
+    {
+        "t": "2013-01-13T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 100,
+        "category": "Home"
+    },
+    {
+        "t": "2013-01-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 390,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-01-19T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1850,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-01-26T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-12-28T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 450,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-12-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-12-28T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-12-28T10:00:00.000Z",
+        "name": "Obi",
+        "value": 1200,
+        "category": "Home"
+    },
+    {
+        "t": "2014-12-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-12-31T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-04T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-04T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 500,
+        "category": "Home"
+    },
+    {
+        "t": "2014-01-06T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 600,
+        "category": "Car"
+    },
+    {
+        "t": "2014-01-07T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 350,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-01-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-07T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 450,
+        "category": "Home"
+    },
+    {
+        "t": "2014-01-07T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 950,
+        "category": "Home"
+    },
+    {
+        "t": "2014-01-08T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 390,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-08T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-19T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1650,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-01-19T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 50,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-01-19T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 30,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-19T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-01-23T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 510,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-26T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-26T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-29T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-29T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-29T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2000,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-06-30T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 550,
+        "category": "Car"
+    },
+    {
+        "t": "2013-07-01T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-02T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-04T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-06T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-07T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-07T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1350,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-07-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-08T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 360,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-09T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-11T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-11T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-14T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1350,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-07-13T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-14T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 100,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-15T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-16T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 700,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-18T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-18T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-18T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-19T10:00:00.000Z",
+        "name": "Obi",
+        "value": 850,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-19T10:00:00.000Z",
+        "name": "Obi",
+        "value": 300,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-20T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-19T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 100,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-21T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 400,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-20T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 350,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-21T10:00:00.000Z",
+        "name": "Obi",
+        "value": 1150,
+        "category": "Home"
+    },
+    {
+        "t": "2013-07-22T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-23T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-23T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 450,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-23T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-23T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 850,
+        "category": "Car"
+    },
+    {
+        "t": "2013-07-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-24T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 300,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-07-24T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-25T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-25T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-07-25T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 400,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-06-26T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 450,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-28T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2800,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-06-29T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-29T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 240,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-25T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-02T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-04T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-04T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-04T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-05T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-05T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 200,
+        "category": "Home"
+    },
+    {
+        "t": "2014-07-05T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 550,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-07-05T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1450,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-07-06T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-05T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 400,
+        "category": "Home"
+    },
+    {
+        "t": "2014-07-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-09T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 360,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-12T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 2600,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-07-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 30,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-13T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-15T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-17T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-18T10:00:00.000Z",
+        "name": "Gas Station 3",
+        "value": 900,
+        "category": "Car"
+    },
+    {
+        "t": "2014-07-18T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 650,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-07-18T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-18T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-24T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 400,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-07-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-07-25T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-26T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-25T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 400,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-05-25T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 2050,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-05-26T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 450,
+        "category": "Car"
+    },
+    {
+        "t": "2013-05-27T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 450,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-31T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-01T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-02T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-01T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1450,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-06-04T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 360,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-06T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-07T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-08T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-08T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1300,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-06-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-12T10:00:00.000Z",
+        "name": "Gas Station 3",
+        "value": 900,
+        "category": "Car"
+    },
+    {
+        "t": "2013-06-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-16T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-16T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1300,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-06-15T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-15T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 100,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-06-16T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-18T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-19T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 450,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-21T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-20T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-23T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-22T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 650,
+        "category": "Car"
+    },
+    {
+        "t": "2013-06-22T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-23T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1650,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-06-23T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-22T10:00:00.000Z",
+        "name": "Obi",
+        "value": 100,
+        "category": "Home"
+    },
+    {
+        "t": "2013-06-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-06-25T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-27T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-24T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 200,
+        "category": "Home"
+    },
+    {
+        "t": "2014-05-28T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-30T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-01T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-31T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-31T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 30,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-31T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 300,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-05-31T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1700,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-06-02T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-02T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-03T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 150,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-06-03T10:00:00.000Z",
+        "name": "Gas Station 1",
+        "value": 750,
+        "category": "Car"
+    },
+    {
+        "t": "2014-06-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 390,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-04T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-05T10:00:00.000Z",
+        "name": "Service 2",
+        "value": 3900,
+        "category": "Car"
+    },
+    {
+        "t": "2014-06-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-29T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-07T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-07T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 2300,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-06-08T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-31T10:00:00.000Z",
+        "name": "Obi",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2014-06-01T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2014-06-07T10:00:00.000Z",
+        "name": "Obi",
+        "value": 100,
+        "category": "Home"
+    },
+    {
+        "t": "2014-06-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-11T10:00:00.000Z",
+        "name": "Service 2",
+        "value": 3350,
+        "category": "Car"
+    },
+    {
+        "t": "2014-06-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-15T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1100,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-06-15T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-18T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-18T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-20T10:00:00.000Z",
+        "name": "Service 2",
+        "value": 1150,
+        "category": "Car"
+    },
+    {
+        "t": "2014-06-20T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-20T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-20T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-21T10:00:00.000Z",
+        "name": "Victoria",
+        "value": 2450,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-06-21T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 100,
+        "category": "Home"
+    },
+    {
+        "t": "2014-06-22T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-23T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-06-25T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-02-26T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-03-02T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 3000,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-03-07T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-03-08T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-03-08T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 450,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-03-08T10:00:00.000Z",
+        "name": "Victoria",
+        "value": 1900,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-03-09T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 700,
+        "category": "Car"
+    },
+    {
+        "t": "2013-03-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-03-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-03-17T10:00:00.000Z",
+        "name": "Gas Station 3",
+        "value": 600,
+        "category": "Car"
+    },
+    {
+        "t": "2013-03-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-03-20T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 450,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-03-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-03-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-03-02T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1250,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-03-01T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2650,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-03-02T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 400,
+        "category": "Home"
+    },
+    {
+        "t": "2014-03-02T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-03-02T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 350,
+        "category": "Home"
+    },
+    {
+        "t": "2014-03-03T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 510,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-03-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-03-09T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 3350,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-03-08T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-03-09T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 30,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-03-09T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-03-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-03-09T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 300,
+        "category": "Home"
+    },
+    {
+        "t": "2014-03-13T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 360,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-26T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-27T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-27T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2013-04-27T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1950,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-04-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-04-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 420,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-01T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-02T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 300,
+        "category": "Home"
+    },
+    {
+        "t": "2013-05-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-08T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-08T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-09T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-10T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-11T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1700,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-05-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 30,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-05T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2050,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-05-17T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 450,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-05-17T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 480,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-19T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1050,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-05-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-05-25T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-26T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-26T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1650,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-04-27T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 100,
+        "category": "Home"
+    },
+    {
+        "t": "2014-04-27T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-26T10:00:00.000Z",
+        "name": "Obi",
+        "value": 650,
+        "category": "Home"
+    },
+    {
+        "t": "2014-04-27T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 250,
+        "category": "Home"
+    },
+    {
+        "t": "2014-04-29T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-04-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-01T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1750,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-05-01T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-02T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-03T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 200,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-05-04T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-04T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-07T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-08T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-11T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1900,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-05-11T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 360,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-15T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-15T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-17T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 2500,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-05-18T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-20T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-20T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-21T10:00:00.000Z",
+        "name": "Service 2",
+        "value": 750,
+        "category": "Car"
+    },
+    {
+        "t": "2014-05-21T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-22T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-23T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-24T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 30,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-05-24T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2400,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-05-25T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-26T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-26T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 2250,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-10-27T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 750,
+        "category": "Car"
+    },
+    {
+        "t": "2013-10-29T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-29T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 330,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-31T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-31T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-31T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-02T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-03T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2350,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-11-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-10T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-09T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-15T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-15T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-17T10:00:00.000Z",
+        "name": "Victoria",
+        "value": 2500,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-11-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-16T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 350,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-11-16T10:00:00.000Z",
+        "name": "Obi",
+        "value": 300,
+        "category": "Home"
+    },
+    {
+        "t": "2013-11-16T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 300,
+        "category": "Home"
+    },
+    {
+        "t": "2013-11-19T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 510,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-22T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-23T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-11-23T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 950,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-11-24T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2013-11-24T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1850,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-09-26T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 420,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-27T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-29T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-28T10:00:00.000Z",
+        "name": "Victoria",
+        "value": 1650,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-10-02T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-03T10:00:00.000Z",
+        "name": "Service 2",
+        "value": 5250,
+        "category": "Car"
+    },
+    {
+        "t": "2013-10-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 30,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-03T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-04T10:00:00.000Z",
+        "name": "Obi",
+        "value": 1050,
+        "category": "Home"
+    },
+    {
+        "t": "2013-10-04T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-05T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-05T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1750,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-10-06T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-06T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 650,
+        "category": "Home"
+    },
+    {
+        "t": "2013-10-11T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 480,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-12T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 150,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-10-12T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 250,
+        "category": "Home"
+    },
+    {
+        "t": "2013-10-12T10:00:00.000Z",
+        "name": "Obi",
+        "value": 250,
+        "category": "Home"
+    },
+    {
+        "t": "2013-10-16T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-18T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-19T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 450,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-10-20T10:00:00.000Z",
+        "name": "Obi",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2013-10-20T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-19T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1600,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-10-23T10:00:00.000Z",
+        "name": "Service 1",
+        "value": 3450,
+        "category": "Car"
+    },
+    {
+        "t": "2013-10-23T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-10-23T10:00:00.000Z",
+        "name": "Obi",
+        "value": 100,
+        "category": "Home"
+    },
+    {
+        "t": "2014-09-26T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-28T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 2550,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-09-27T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-01T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-03T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-03T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-05T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 350,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-10-04T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-04T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1500,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-10-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-04T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 400,
+        "category": "Home"
+    },
+    {
+        "t": "2014-10-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-07T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 390,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-08T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-09T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-11T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-11T10:00:00.000Z",
+        "name": "Victoria",
+        "value": 2200,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-10-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-16T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-18T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-19T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2200,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-10-19T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-19T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 30,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-23T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-10-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 510,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-28T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-28T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-29T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-30T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 400,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-09-01T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 1250,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-08-31T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 500,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-31T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 16750,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-31T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-01T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-08-31T10:00:00.000Z",
+        "name": "Obi",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2013-08-31T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 550,
+        "category": "Home"
+    },
+    {
+        "t": "2013-09-01T10:00:00.000Z",
+        "name": "Obi",
+        "value": 3550,
+        "category": "Home"
+    },
+    {
+        "t": "2013-09-02T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 650,
+        "category": "Car"
+    },
+    {
+        "t": "2013-09-02T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-02T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-03T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-05T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 200,
+        "category": "Home"
+    },
+    {
+        "t": "2013-09-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-05T10:00:00.000Z",
+        "name": "Random food court",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-06T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 500,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-09-07T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-07T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 1300,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-09-08T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 350,
+        "category": "Home"
+    },
+    {
+        "t": "2013-09-08T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-09T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 480,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-09T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-14T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 2800,
+        "category": "Home"
+    },
+    {
+        "t": "2013-09-16T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 850,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-09-16T10:00:00.000Z",
+        "name": "Obi",
+        "value": 450,
+        "category": "Home"
+    },
+    {
+        "t": "2013-09-17T10:00:00.000Z",
+        "name": "Gas Station 2",
+        "value": 650,
+        "category": "Car"
+    },
+    {
+        "t": "2013-09-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-17T10:00:00.000Z",
+        "name": "Obi",
+        "value": 650,
+        "category": "Home"
+    },
+    {
+        "t": "2013-09-17T10:00:00.000Z",
+        "name": "Ikea",
+        "value": 10350,
+        "category": "Home"
+    },
+    {
+        "t": "2013-09-18T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-18T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-20T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 150,
+        "category": "Home"
+    },
+    {
+        "t": "2013-09-20T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-21T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2450,
+        "category": "Auchan"
+    },
+    {
+        "t": "2013-09-22T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2013-09-22T10:00:00.000Z",
+        "name": "Leroy Merlin",
+        "value": 350,
+        "category": "Home"
+    },
+    {
+        "t": "2014-08-27T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-27T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-28T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-30T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-08-30T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 2850,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-08-31T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 210,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-02T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-05T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-06T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-06T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 30,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-06T10:00:00.000Z",
+        "name": "Auchan 2",
+        "value": 3000,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-09-10T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-12T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-13T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-13T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 2700,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-09-14T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 180,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-15T10:00:00.000Z",
+        "name": "Obi",
+        "value": 100,
+        "category": "Home"
+    },
+    {
+        "t": "2014-09-15T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-16T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-17T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-17T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-17T10:00:00.000Z",
+        "name": "Gas Station 3",
+        "value": 550,
+        "category": "Car"
+    },
+    {
+        "t": "2014-09-18T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-19T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-20T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 150,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-21T10:00:00.000Z",
+        "name": "Auchan 1",
+        "value": 3050,
+        "category": "Auchan"
+    },
+    {
+        "t": "2014-09-21T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 90,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-19T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-23T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-24T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-25T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 120,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-25T10:00:00.000Z",
+        "name": "Starbucks",
+        "value": 60,
+        "category": "Cafe"
+    },
+    {
+        "t": "2014-09-25T10:00:00.000Z",
+        "name": "Bratya Karavaevi",
+        "value": 60,
+        "category": "Cafe"
+    }
+]
