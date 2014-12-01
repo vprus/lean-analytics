@@ -602,7 +602,7 @@
 
                    chart.elasticX(true)
                    .width(1140).height(65)
-                   .margins({top: 10, right: 50, bottom: 30, left: this.options.marginLeft});
+                   .margins({top: 10, right: 10, bottom: 30, left: this.options.marginLeft});
 
                 } else {
 
@@ -614,7 +614,7 @@
 
                    chart.elasticX(true)
                    .width(250).height(200)      
-                    .margins({top: 10, right: 50, bottom: 30, left: this.options.marginLeft});        
+                    .margins({top: 10, right: 10, bottom: 30, left: this.options.marginLeft});
                 }
                 
                 this.charts.push([chart]);
