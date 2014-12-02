@@ -1,0 +1,31 @@
+{
+  "name": "dcjs",
+  "main": [
+    "dc.js",
+    "dc.css"
+  ],
+  "ignore": [
+    ".gitignore",
+    ".travis.yml",
+    "build.xml",
+    "globals.js",
+    "index.js",
+    "make",
+    "package.json",
+    "test",
+    "src"
+  ],
+  "dependencies": {
+    "d3": "3.x",
+    "crossfilter": "1.x"
+  },
+  "homepage": "https://github.com/vprus/dc.js",
+  "_release": "03438fd",
+  "_resolution": {
+    "type": "commit",
+    "commit": "03438fd"
+  },
+  "_source": "https://github.com/vprus/dc.js.git",
+  "_target": "03438fd",
+  "_originalSource": "https://github.com/vprus/dc.js.git"
+}
