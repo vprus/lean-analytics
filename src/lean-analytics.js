@@ -37,7 +37,62 @@
 
     LA.Model = Base.extend({
 
-        constructor: function(data) {
+        constructor: function(_) {
+            this.percentage = 0;
+
+            if (arguments.length != 0) {
+                this.percentage = 100;
+                initialize(arguments[0]);
+            }
+        },
+
+        // Load JSON resource with the specified URL.
+        load: function(json) {
+            var model = this;
+            d3.json(json)
+            .on("progress", function() {
+                console.log("Progress " + d3.event.loaded + " of " + d3.event.total);
+                if (d3.event.total)
+                    model.percentage = Math.floor(100*d3.event.loaded/d3.event.total);
+                else
+                    model.percentage = 75;
+
+                model.trigger("changed:state");
+            })
+            .on("load", function(json) { 
+                model.percentage = 100;
+                model.trigger("changed:state");
+                model.initialize(json); 
+                model.dataReady_ = true;
+                model.trigger("changed:state");
+            })
+            .on("error", function(error) { 
+                model.errorMessage = error; 
+            })
+            .get();
+        },
+
+        dataReady: function() {
+            return this.dataReady_;
+        },
+
+        loadedPercentage: function() {
+            return this.percentage;
+        },
+
+        // Called when the data is specified or loaded. 
+        prepareData: function(data) {
+
+            data.forEach(function(d) {
+                d.t = new Date(d.t);
+            });
+
+        },
+
+        initialize: function(data) {
+
+            this.prepareData(data);
+
             this.data_ = data;
             this.crf = crossfilter(data);
             this.timeDimension = this.crf.dimension(function(d) { return d.t; });
@@ -56,7 +111,7 @@
             // Now try to apply reasonable defaults.
             this.range(this.ranges_[1].range);
             this.mainMetric(this.mainMetrics()[0]);
-            this.derivedMetric(this.derivedMetrics()[0]);
+            this.derivedMetric(this.derivedMetrics()[0]);            
         },
 
         // Return the timestamp of a data entry. Default implementation returns
@@ -401,9 +456,9 @@
         // Create an instance of a view
         // 
         constructor: function(element, model, options) {
-            var this_ = this;
             this.model = model;
             this.$element = (typeof element === "string") ? $(element) : element;
+            this.$element.addClass("la");
             this.options = options || {}
             _.defaults(this.options, {
                 template: "lean-analytics.html",
@@ -412,10 +467,41 @@
 
             this.charts = [];
 
-            template = this.options.template || "lean-analytics.html";
-            this.$element.load(template, function() {
-                this_.makeGraphs_(model);
-            });
+            model.on("changed:state", this.update, this);
+            this.update();
+        },
+
+        update: function() {
+
+            if (this.model.dataReady())            
+            {
+                if (!this.graphsCreated_) {
+                    this.graphsCreated_ = true;
+                    var View = this;                
+                    this.$element.load(this.options.template, function() {
+                        View.makeGraphs_(View.model);
+                    });
+                }
+                // We assume that after model is fully initialized, nothing
+                // can go wrong.
+                return;
+            }
+
+            if (this.$progress == undefined) {
+                var $progressBlock = $("\
+                <div class='progress'>\
+                    <div>Loading data</div>\
+                    <div class='progress-bar-background'>\
+                        <div class='progress-bar' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100'>\
+                        </div>\
+                    </div>\
+                </div>");
+                this.$element.append($progressBlock);
+                this.$progress = $progressBlock.find(".progress-bar");
+            }
+
+            this.$progress.css('width', this.model.loadedPercentage() + '%');            
+            
         },
 
         initializeDropdown: function($element, data, selected, setSelected, nameAccessor)

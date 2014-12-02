@@ -10,6 +10,23 @@
 	right: 0;
 }
 
+.la .progress {
+	height: auto;
+	border: none;
+	padding: 0;
+	padding-top: 10px;
+	border-radius: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	font-weight: bold;
+}
+
+.la .progress-bar-background {
+	width: 100%;
+	height: 6px;
+	background-color: #ccc;
+}
+
 #view-selector > div {
     display: inline-block;
 }

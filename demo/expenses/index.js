@@ -1,29 +1,22 @@
 
-d3.json("expenses.json", function(error, expenses) {
+var Model = LeanAnalytics.Model.extend({
 
-    expenses.forEach(function(d) {
-       d.t = new Date(d.t);
-    });
+    makeAdditionalGroups_: function() {
 
-    var Model = LeanAnalytics.Model.extend({
+        var perCategory = this.crf.dimension(function(d) {                
+            return d.category || d.name;
+        });
 
-        makeAdditionalGroups_: function() {
+        return [
+            {name: "Category", dimension: perCategory, group: perCategory.group()},
+            this.makePerDayOfWeekGroup_()
+        ];
+    },
 
-            var perCategory = this.crf.dimension(function(d) {                
-                return d.category || d.name;
-            });
+});
 
-            return [
-                {name: "Category", dimension: perCategory, group: perCategory.group()},
-                this.makePerDayOfWeekGroup_()
-            ];
-        },
-
-    });
-
-    var model = new Model(expenses);
-    var view = new LeanAnalytics.View('#lean-analytics', model, {
-        template: "../../dist/lean-analytics.html"
-    });
-
+var model = new Model();
+model.load("expenses.json");
+var view = new LeanAnalytics.View('#lean-analytics', model, {
+    template: "../../dist/lean-analytics.html"
 });
