@@ -5,9 +5,18 @@
 	width: 100%;
 }
 
-.la.time-selector #range-selector {
+.la.time-selector #view-selector {
 	position: absolute;
 	right: 0;
+}
+
+/* Style range dispay similar to button, to ensure
+   perfect alignment. */
+.la .range-display {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 6px 12px;
+	border: 1px solid transparent;	
 }
 
 .la .progress {

@@ -605,6 +605,13 @@
             var derivedMetricChart;
 
             var $rangeSelector = this.$element.find("#range-selector");
+            var $rangeDisplay = this.$element.find(".range-display");
+
+            function updateRangeDisplay(range) {
+                $rangeDisplay.text(moment(range[0]).format('MMM D YYYY') + " to " + moment(range[1]).format('MMM D YYYY'));                
+            }
+            updateRangeDisplay(model.range());
+
             model.ranges().forEach(function(r) {
                 var name = r.name;
                 var range = r.range;            
@@ -629,6 +636,7 @@
                         // elasticX will cause X axis to cover all time range. Set
                         // time range explicitly.
                         mainChart.x().domain(range);
+                        updateRangeDisplay(range);
                         // TODO: this do this using events.
                         dc.renderAll();
                     }
