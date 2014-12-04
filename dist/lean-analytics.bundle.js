@@ -407,8 +407,17 @@
             var perDayOfWeek = this.crf.dimension(function(d) {
                 return moment(d.t).isoWeekday();
             });
-            
-            return {name: "Day of week", dimension: perDayOfWeek, group: perDayOfWeek.group()};
+
+            // It would be better to use moment.weekdaysShort(), but that
+            // would require an API to set moment locale to be complete.
+            var days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+            return {
+                name: "Day of week", dimension: perDayOfWeek, group: perDayOfWeek.group(),
+                keyFormatter: function(k) {
+                    return days[k-1];
+                }
+            };
         },
 
         makePerHourGroup_: function() {
@@ -550,16 +559,25 @@
             }
         },
 
+        defaultKeyFormatter: function(k)
+        {
+            return k;
+        },
+
         updateChart: function(chart, data)
         {
             chart
                 .dimension(data.dimension)
                 .group(data.group, data.name);
+            var keyFormatter = data.keyFormatter || this.defaultKeyFormatter;                
             var valueFormatter = data.valueFormatter || this.defaultValueFormatter;
             if (data.valueAccessor) {
                 chart
                     .valueAccessor(data.valueAccessor)
-                    .title(function(d) { return d.key + ": " + valueFormatter(data.valueAccessor(d)); });
+                    .title(function(d) { return keyFormatter(d.key) + ": " + valueFormatter(data.valueAccessor(d)); });
+            }
+            if (data.keyFormatter) {
+                chart.label(function(d) { return keyFormatter(d.key); });
             }
         },
 
