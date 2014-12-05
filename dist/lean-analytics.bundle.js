@@ -326,7 +326,9 @@
 
             var regression_group = this.makeDerivedMetricGroup_(function(data) {
                 data.forEach(function(d) { d[0] = d[0].getTime(); });
-                return regression('linear', data).points;
+                return regression('linear', data).points.map(function(d) {
+                    return [new Date(d[0]), d[1]];
+                });
             });
 
             var cumulative_group = this.makeDerivedMetricGroup_(function(data) {
@@ -561,12 +563,7 @@
             }
         },
 
-        defaultKeyFormatter: function(k)
-        {
-            return k;
-        },
-
-        updateChart: function(chart, data)
+        updateChart: function(chart, data, defaultKeyFormatter)
         {
             var name;
             if (data.groupName && data.metricName) {
@@ -578,17 +575,16 @@
             chart
                 .dimension(data.dimension)
                 .group(data.group, name);
-            var keyFormatter = data.keyFormatter || this.defaultKeyFormatter;
+            var keyFormatter = data.keyFormatter || defaultKeyFormatter || function(k) { return k; }
+            var valueAccessor = data.valueAccessor || function(d) { return d.value; }
             var valueFormatter = data.valueFormatter || this.defaultValueFormatter;
-            if (data.valueAccessor) {
-                chart
-                    .valueAccessor(data.valueAccessor)
-                    .title(function(d) { return keyFormatter(d.key) + ": " + valueFormatter(data.valueAccessor(d)); });
-            }
-            if (data.keyFormatter) {
-                chart.label(function(d) { return keyFormatter(d.key); });
-            }
+
+            chart.valueAccessor(valueAccessor)
+            chart.title(function(d) { return keyFormatter(d.key) + ": " + valueFormatter(valueAccessor(d)); });
+            chart.label(function(d) { return keyFormatter(d.key); });
         },
+
+        dateFormatter: d3.time.format("%Y-%m-%d"),
 
         updateCharts: function() {
 
@@ -600,8 +596,9 @@
             // FIXME: don't special-case first. Just match everything.
             //this.mainChart.dimension(data[0][0].dimension);
             //this.mainChart.group(data[0][0].group);
-            this.updateChart(this.charts[0][0], data[0][0]);
-            this.updateChart(this.charts[0][1], data[0][1]);
+
+            this.updateChart(this.charts[0][0], data[0][0], this.dateFormatter);
+            this.updateChart(this.charts[0][1], data[0][1], this.dateFormatter);
 
             var i;
             for (i = 1; i < data.length; ++i) {
