@@ -43,6 +43,8 @@
             if (arguments.length != 0) {
                 this.percentage = 100;
                 initialize(arguments[0]);
+                model.dataReady_ = true;
+                model.trigger("changed:state");
             }
         },
 
@@ -182,10 +184,9 @@
             });
 
             this.graphData_.forEach(function(gd, i) {
-                if (i == 0) {
-                    // The first data line of main chart should have the same name is main metric.
-                    gd[0].name = metric.name;
-                }
+                // We intentionally don't change gd[1], it should have the name of derived metric,
+                // not the main one.
+                gd[0].metricName = metric.name;
                 gd[0].group.reduce(metric.reduceAdd, metric.reduceRemove, metric.reduceInitial);
                 gd[0].valueAccessor = metric.valueAccessor;
                 gd[0].group.order(function(v) { 
@@ -218,7 +219,7 @@
                 return;
 
             var d = this.graphData_[0][1];
-            d.name = metric.name;
+            d.metricName = metric.name;
             d.group = metric.group;
             d.valueAccessor = metric.valueAccessor;
 
@@ -243,7 +244,8 @@
             var group = valueByTimeUnit.group();
 
             // Name, value accessor and reduce functions will come from metric.
-            graphData_[0][0] = {dimension: valueByTimeUnit, group: group};
+            // FIXME: use 'groupName' everywhere else.
+            graphData_[0][0] = {groupName: "week", dimension: valueByTimeUnit, group: group};
             // Pretty much everything comes from metric - including group that
             // will post-process values from graphData_[0][0]
             graphData_[0][1] = {dimension: valueByTimeUnit};
@@ -412,7 +414,7 @@
             var days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
             return {
-                name: "Day of week", dimension: perDayOfWeek, group: perDayOfWeek.group(),
+                groupName: "Day of week", dimension: perDayOfWeek, group: perDayOfWeek.group(),
                 keyFormatter: function(k) {
                     return days[k-1];
                 }
@@ -432,7 +434,7 @@
                     return "Evening";
             });
 
-            return {name: "Time of day", dimension: perHour, group: perHour.group()};
+            return {groupName: "Time of day", dimension: perHour, group: perHour.group()};
         },
 
         makeAdditionalGroups_: function() {
@@ -513,7 +515,7 @@
             
         },
 
-        initializeDropdown: function($element, data, selected, setSelected, nameAccessor)
+        initializeDropdown: function($element, metrics, selected, setSelected, nameAccessor)
         {
             nameAccessor = nameAccessor || function(d) { return d.name; };
 
@@ -522,7 +524,7 @@
             
             $button.find('span:first').text(nameAccessor(selected));
 
-            data.forEach(function(d) {
+            metrics.forEach(function(d) {
 
                 var $item = $("<li><a href='#'>" + nameAccessor(d) + "</a></li>");
                 $dropdown.append($item);
@@ -565,9 +567,16 @@
 
         updateChart: function(chart, data)
         {
+            var name;
+            if (data.groupName && data.metricName) {
+                name = data.metricName + " by " + data.groupName;
+            } else {
+                name = data.metricName;
+            }
+            name = this.capitalize(name);
             chart
                 .dimension(data.dimension)
-                .group(data.group, data.name);
+                .group(data.group, name);
             var keyFormatter = data.keyFormatter || this.defaultKeyFormatter;
             var valueFormatter = data.valueFormatter || this.defaultValueFormatter;
             if (data.valueAccessor) {
@@ -594,8 +603,15 @@
             this.updateChart(this.charts[0][1], data[0][1]);
 
             var i;
-            for (i = 1; i < data.length; ++i) 
-                this.updateChart(this.charts[i][0], data[i][0]);        
+            for (i = 1; i < data.length; ++i) {
+                var g = data[i][0];
+                this.updateChart(this.charts[i][0], g);
+
+                var $div = this.charts[i][0].$container;
+                $div.find("span.secondary-chart-title").text(g.groupName);
+                $div.find("span.secondary-chart-subtitle").text(this.capitalize("Total " + g.metricName + " by " + g.groupName));
+
+            }
         },
 
         makeGraphs_: function(model) {
@@ -705,11 +721,11 @@
 
                 if (useLinearChart) {
 
-                    var $div = $("<div class='col-lg-12'><b></b><div style='height: 70px'></div></div>");
-                    $div.find("b").text(g.name);
+                    var $div = $("<div class='col-lg-12'><span class='secondary-chart-title'></span> <span class='secondary-chart-subtitle'></span><div style='height: 70px'></div></div>");
                     $secondary.append($div);
 
                    chart = unrolledPieChart($div.children('div')[0]);
+                   chart.$container = $div;
                    chart.cap(10);
 
                    chart.elasticX(true)
@@ -718,11 +734,11 @@
 
                 } else {
 
-                    var $div = $("<div class='col-lg-4'><b></b><div style='height: 200px'></div></div>");
-                    $div.find("b").text(g.name);
+                    var $div = $("<div class='col-lg-4'><span class='secondary-chart-title'></span> <span class='secondary-chart-subtitle'></span><div style='height: 200px'></div></div>");
                     $secondary.append($div);
 
                    chart = dc.rowChart($div.children('div')[0]);
+                   chart.$container = $div;
 
                    chart.elasticX(true)
                    .width(250).height(200)      
@@ -752,6 +768,10 @@
 
        
             dc.renderAll();
+
+        },
+
+        updateSecondaryChartTitle: function(chart, chartData) {
 
         },
 
@@ -804,6 +824,11 @@
             }
    
             rows.exit().remove();
+        },
+
+        capitalize: function(s) {
+            return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+
         }
 
     });

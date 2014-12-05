@@ -36,6 +36,14 @@
 	background-color: #ccc;
 }
 
+.la .secondary-chart-title {
+	font-weight: bold;
+}
+
+.la .secondary-chart-subtitle {
+	color: #777;
+}
+
 #view-selector > div {
     display: inline-block;
 }
