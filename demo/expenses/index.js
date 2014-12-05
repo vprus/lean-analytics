@@ -1,6 +1,13 @@
 
 var Model = LeanAnalytics.Model.extend({
 
+    makeMainMetrics_: function() {
+        var r = LeanAnalytics.Model.prototype.makeMainMetrics_.call(this);
+        r[0].name = "Amount";
+        r[1].name = "Transaction Count";
+        return r;
+    },
+
     makeAdditionalGroups_: function() {
 
         var perCategory = this.crf.dimension(function(d) {                
@@ -8,7 +15,7 @@ var Model = LeanAnalytics.Model.extend({
         });
 
         return [
-            {name: "Category", dimension: perCategory, group: perCategory.group()},
+            {groupName: "Category", dimension: perCategory, group: perCategory.group()},
             this.makePerDayOfWeekGroup_()
         ];
     },
