@@ -152,7 +152,7 @@
             var first = this.timeDimension.bottom(1)[0].t;
 
             return [
-                {name: "All time", range: [first, new Date()]},
+                {name: "All time", range: [new Date(first), new Date()]},
                 {name: "2 years", range: this.computeRange(2, 'year')},
                 {name: "1 year", range: this.computeRange(1, 'year')}
             ];
