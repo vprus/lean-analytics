@@ -718,7 +718,7 @@
 
                 if (useLinearChart) {
 
-                    var $div = $("<div class='col-lg-12'><span class='secondary-chart-title'></span> <span class='secondary-chart-subtitle'></span><div style='height: 70px'></div></div>");
+                    var $div = $("<div class='col-lg-12'><span class='secondary-chart-title'></span> <span class='secondary-chart-subtitle'></span><div style='height: 50px'></div></div>");
                     $secondary.append($div);
 
                    chart = unrolledPieChart($div.children('div')[0]);
