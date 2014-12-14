@@ -69,7 +69,8 @@
                 model.trigger("changed:state");
             })
             .on("error", function(error) { 
-                model.errorMessage = error; 
+                model.error_ = error; 
+                model.trigger("changed:state");
             })
             .get();
         },
@@ -80,6 +81,10 @@
 
         loadedPercentage: function() {
             return this.percentage;
+        },
+
+        error: function() {
+            return this.error_;
         },
 
         // Called with the data loaded from server or passed to
@@ -555,20 +560,41 @@
                 return;
             }
 
-            if (this.$progress == undefined) {
-                var $progressBlock = $("\
-                <div class='progress'>\
-                    <div>Loading data</div>\
-                    <div class='progress-bar-background'>\
-                        <div class='progress-bar' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100'>\
-                        </div>\
-                    </div>\
-                </div>");
-                this.$element.append($progressBlock);
-                this.$progress = $progressBlock.find(".progress-bar");
-            }
+            var error = this.model.error();
+            if (error) {
+                if (this.$errorMessage == undefined) {
+                    this.$errorMessage = $("\
+                        <div class='error'><p class='bg-danger'><b>Could not load data</b>: <span></span></p></div>\
+                        ");
+                    this.$element.append(this.$errorMessage);
+                }
 
-            this.$progress.css('width', this.model.loadedPercentage() + '%');            
+                this.$errorMessage.find('span').text(error);
+                if (this.$progress) {
+                    this.$progress.hide();
+                }
+            }
+            else {
+
+                if (this.$progress == undefined) {
+                    this.$progress = $("\
+                    <div class='progress'>\
+                        <div>Loading data</div>\
+                        <div class='progress-bar-background'>\
+                            <div class='progress-bar' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100'>\
+                            </div>\
+                        </div>\
+                    </div>");
+                    this.$element.append(this.$progress);                    
+                }
+
+                if (this.$error) {
+                    this.$error.hide();
+                }
+                this.$progress.show();
+                var bar = this.$progress.find(".progress-bar");
+                bar.css('width', this.model.loadedPercentage() + '%');            
+            }
             
         },
 
