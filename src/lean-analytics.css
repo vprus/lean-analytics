@@ -1,4 +1,10 @@
 
+/* Force scrollbar, to avoid jumps when table becomes small after
+   selecting particular time or category. */
+html {
+    overflow-y: scroll;
+}
+
 .la.time-selector {
 	position: relative;
 	margin-bottom: 1em;
@@ -36,11 +42,13 @@
 	background-color: #ccc;
 }
 
-.la .secondary-chart-title {
+.la .secondary-chart-title,
+.la .table-title {
 	font-weight: bold;
 }
 
-.la .secondary-chart-subtitle {
+.la .secondary-chart-subtitle,
+.la .table-subtitle {
 	color: #777;
 }
 
@@ -48,6 +56,12 @@
     display: inline-block;
 }
 
+div.la table {
+	margin-top: 10px;
+}
+
 div.la table td:first-child {
 	text-align: right;
+	width: 1%;
+    white-space: nowrap;
 }
