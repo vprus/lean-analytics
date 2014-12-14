@@ -576,6 +576,11 @@
 
             var error = this.model.error();
             if (error) {
+
+                if (error instanceof XMLHttpRequest) {
+                    error = error.statusText;
+                }
+
                 if (this.$errorMessage == undefined) {
                     this.$errorMessage = $("\
                         <div class='error'><p class='bg-danger'><b>Could not load data</b>: <span></span></p></div>\
