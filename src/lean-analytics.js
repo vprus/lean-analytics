@@ -533,9 +533,23 @@
             this.$element.addClass("la");
             this.options = options || {}
             _.defaults(this.options, {
-                template: "lean-analytics.html",
                 marginLeft: 40
             });
+
+            if (!this.options.template) {
+                // Try to find path to lean analytics script, and infer template from that.
+                var template = "lean-analytics.html";
+                var $scripts = $('script[src*="lean-analytics"]');
+                if ($scripts.length == 1) {
+                    var src = $scripts.attr('src');
+                    var idx = src.lastIndexOf('/');
+                    if (idx != -1) {
+                        template = src.substring(0, idx + 1) + template;
+                    }
+                }
+
+                this.options.template = template;
+            }
 
             this.charts = [];
             this.categoryCharts = [];

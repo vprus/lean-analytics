@@ -39,7 +39,6 @@ var Model = LeanAnalytics.Model.extend({
 });
 
 var model = new Model();
+var view = new LeanAnalytics.View('#lean-analytics', model);
+
 model.load("expenses.json");
-var view = new LeanAnalytics.View('#lean-analytics', model, {
-    template: "../../dist/lean-analytics.html"
-});
