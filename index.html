@@ -5,6 +5,9 @@
 
   <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="components/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="components/dc.js/dc.css">
+  <link rel="stylesheet" href="dist/lean-analytics.css">
+
 
 </head>
 <body>
@@ -13,11 +16,16 @@
 
     <h1>Lean Analytics</h1>
 
-    <p class="lead">Lean Analytics is a JavaScript library to quickly visualize, analyze and cross-filter time series data. It
-    is in development, but you can play with the <a href="demo/expenses/index.html">demo</a> and follow development on
-    <a href="http://github.com/vprus/lean-analytics">GitHub</a>.</p>
-    
-   
+    <p class="lead">Lean Analytics is a JavaScript library to quickly
+      visualize, analyze and cross-filter time series data. It's extremely
+      easy to setup and customize. The demo below visualizes credit card
+      expenses, and it's easy to customize it to other kinds of data, like 
+      product downloads, or bug reports. Play with the demo below, see the 
+      demo <a href="https://github.com/vprus/lean-analytics/blob/master/demo/expenses/index.js">source</a>,
+      and follow development on <a href="http://github.com/vprus/lean-analytics">GitHub</a>.</p>
+
+    <div id="lean-analytics"></div>
+       
   </div>
 
   <script>
@@ -29,5 +37,10 @@
   ga('create', 'UA-55824569-2', 'auto');
   ga('send', 'pageview');
   </script>
+
+  <script src="dist/lean-analytics.bundle.js"></script>
+
+  <script src="demo/expenses/index.js"></script>
+
 
 </body>
