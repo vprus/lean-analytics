@@ -718,7 +718,7 @@
             .width(1140)
             .height(400)
             .dimension(model.valueByTimeUnit)
-            .margins({top: 10, right: 10, bottom: 30, left: this.options.marginLeft})
+            .margins({top: 10, right: 0, bottom: 30, left: this.options.marginLeft})
             .x(d3.time.scale().domain(model.range()).nice(d3.time.day))
             .xUnits(d3.time.weeks)        
             //.y(d3.scale.sqrt())
@@ -770,19 +770,25 @@
 
                 if (useLinearChart) {
 
-                    var $div = $("<div class='col-lg-12'><span class='secondary-chart-title'></span> <span class='secondary-chart-subtitle'></span><div style='height: 50px'></div></div>");
+                    var $div = $("<div class='col-lg-12'><span class='secondary-chart-title'></span> <span class='secondary-chart-subtitle'></span>  <a class='reset pull-right' style='display: none;'>Clear filters</a></div></div>");
                     $secondary.append($div);
 
-                   chart = unrolledPieChart($div.children('div')[0]);
+                   chart = unrolledPieChart($div[0]);
                    chart.$container = $div;
                    chart.cap(10);
 
                    chart.elasticX(true)
-                   .width(1140).height(65)
-                   .margins({top: 10, right: 10, bottom: 30, left: this.options.marginLeft});
+                   .width(1140).height(35).fixedBarHeight(20)
+                   .margins({top: 10, right: 0, bottom: 30, left: this.options.marginLeft});
+
+                   $div.find("a").click(function() {
+                        chart.filterAll();
+                        dc.redrawAll();
+                   });
 
                 } else {
 
+                    // Note: this branch is not used right now, and probably won't work.
                     var $div = $("<div class='col-lg-4'><span class='secondary-chart-title'></span> <span class='secondary-chart-subtitle'></span><div style='height: 200px'></div></div>");
                     $secondary.append($div);
 
