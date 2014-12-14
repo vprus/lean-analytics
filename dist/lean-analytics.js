@@ -69,7 +69,8 @@
                 model.trigger("changed:state");
             })
             .on("error", function(error) { 
-                model.errorMessage = error; 
+                model.error_ = error; 
+                model.trigger("changed:state");
             })
             .get();
         },
@@ -82,37 +83,41 @@
             return this.percentage;
         },
 
-        // Called when the data is specified or loaded. 
+        error: function() {
+            return this.error_;
+        },
+
+        // Called with the data loaded from server or passed to
+        // constructor, and must return an array of elements,
+        // each having 't' field of type Date. May modify the
+        // parameter at will, but must always return a value.
         prepareData: function(data) {
 
             data.forEach(function(d) {
                 d.t = new Date(d.t);
             });
 
+            return data;
         },
 
         initialize: function(data) {
 
-            this.prepareData(data);
+            data = this.prepareData(data);
 
             this.data_ = data;
             this.crf = crossfilter(data);
             this.timeDimension = this.crf.dimension(function(d) { return d.t; });
 
-            // FIXME: abstract away d.name
-            this.entriesByName = this.crf.dimension(function(d) { return d.name; });
-            this.entriesByNameGroup = this.entriesByName.group();
+            this.ranges_ = this.makeRanges();
 
-            this.ranges_ = this.makeRanges_();
+            this.baseMetrics_ = this.makeBaseMetrics();
+            this.derivedMetrics_ = this.makeDerivedMetrics();
         
             this.initializeData_();
 
-            this.metrics_ = this.makeMainMetrics_();
-            this.derivedMetrics_ = this.makeDerivedMetrics_();
-
             // Now try to apply reasonable defaults.
-            this.range(this.ranges_[1].range);
-            this.mainMetric(this.mainMetrics()[0]);
+            this.range(this.ranges_[0].range);
+            this.baseMetric(this.baseMetrics()[0]);
             this.derivedMetric(this.derivedMetrics()[0]);            
         },
 
@@ -122,18 +127,16 @@
             return entry.t;
         },
 
-        // Returns the data to chart. Returned value is
-        // an array, each element corresponding to chart.
-        // First element will be drawn using large bar/line chart,
-        // other elements will be drawn using smaller row charts.
-        // Each top-level element is in turn an array describing
-        // data to show. Presently, the first element must be
-        // array of 2 elements, and other elements must be array of
-        // a single element.
-        // Each element should have these fields:
-        // name, dimension, group, valueAccessor.
-        graphData: function() {
-            return this.graphData_;
+        timelineData: function() {
+            return this.timelineData_;
+        },
+
+        categoryData: function() {
+            return this.categoryData_;
+        },
+
+        tableData: function() {
+            return this.tableData_;
         },
 
         range: function(range) {
@@ -147,12 +150,15 @@
             return this.ranges_;
         },
 
-        makeRanges_: function() {
-
+        makeAllTimeRange: function() {
             var first = this.timeDimension.bottom(1)[0].t;
+            return {name: "All time", range: [new Date(first), new Date()]};
+        },
+
+        makeRanges: function() {
 
             return [
-                {name: "All time", range: [first, new Date()]},
+                this.makeAllTimeRange(),
                 {name: "2 years", range: this.computeRange(2, 'year')},
                 {name: "1 year", range: this.computeRange(1, 'year')}
             ];
@@ -165,44 +171,48 @@
             is used
             - 'valueAccessor' attribute - optional, a function to obtian the
             value from a group object. */
-        mainMetrics: function() {
-            return this.metrics_;        
+        baseMetrics: function() {
+            return this.baseMetrics_;
         },
 
-        mainMetric: function(metric) {
-            if (!arguments.length) return this.mainMetric_;
+        baseMetric: function(metric) {
+            if (!arguments.length) return this.baseMetric_;
 
-            if (this.metrics_.indexOf(metric) == -1)
-                throw "Invalid main metric";
+            if (this.baseMetrics_.indexOf(metric) == -1)
+                throw "Invalid base metric";
 
-            if (this.mainMetric_ === metric)
+            if (this.baseMetric_ === metric)
                 return;
 
-            this.entriesByNameGroup.reduce(metric.reduceAdd, metric.reduceRemove, metric.reduceInitial);
-            this.entriesByNameGroup.order(function(v) { 
-                return metric.valueAccessor({value: v});
-            });
-
-            this.graphData_.forEach(function(gd, i) {
-                // We intentionally don't change gd[1], it should have the name of derived metric,
-                // not the main one.
-                gd[0].metricName = metric.name;
-                gd[0].group.reduce(metric.reduceAdd, metric.reduceRemove, metric.reduceInitial);
-                gd[0].valueAccessor = metric.valueAccessor;
-                gd[0].group.order(function(v) { 
+            function updateDisplayData(data, metric)
+            {
+                data.metricName = metric.name;
+                data.group.reduce(metric.reduceAdd, metric.reduceRemove, metric.reduceInitial);
+                data.valueAccessor = metric.valueAccessor;
+                data.group.order(function(v) { 
                     return metric.valueAccessor({value: v}); 
                 });
+            }
+
+            // We intentionally change only [0], as [1] should have the name of derived metric,
+            // and the pseudo-group
+            updateDisplayData(this.timelineData_[0], metric);
+
+            this.categoryData_.forEach(function(gd) {
+                updateDisplayData(gd, metric);
             });
 
-            this.mainMetric_ = metric;
-            this.trigger('change:mainMetric', this);
+            updateDisplayData(this.tableData_, metric);
+
+            this.baseMetric_ = metric;
+            this.trigger('change:baseMetric', this);
 
             return this;
         },
 
         topEntries: function(k) {
             var r = this.entriesByNameGroup.top(k);
-            var va = this.mainMetric_.valueAccessor;
+            var va = this.baseMetric_.valueAccessor;
             // crossfilter removes elements from groups when filtering, but does not remove
             // the grops. Further, with floating point filtering out can result in value close
             // to zero, but not quite zero. Filter out such useless groups.
@@ -218,7 +228,7 @@
             if (this.derivedMetric_ == metric)
                 return;
 
-            var d = this.graphData_[0][1];
+            var d = this.timelineData_[1];
             d.metricName = metric.name;
             d.group = metric.group;
             d.valueAccessor = metric.valueAccessor;
@@ -233,32 +243,51 @@
             return this.derivedMetrics_;
         },
 
-
         initializeData_: function() {
-            var graphData_ = [[null, null]];
-
 
             var valueByTimeUnit = this.crf.dimension(function(d) { 
                 return moment(d.t).startOf('isoWeek').toDate(); 
             });        
             var group = valueByTimeUnit.group();
 
-            // Name, value accessor and reduce functions will come from metric.
-            // FIXME: use 'groupName' everywhere else.
-            graphData_[0][0] = {groupName: "week", dimension: valueByTimeUnit, group: group};
-            // Pretty much everything comes from metric - including group that
-            // will post-process values from graphData_[0][0]
-            graphData_[0][1] = {dimension: valueByTimeUnit};
+            this.timelineData_ = [
+                // FIXME: use groupName everywhere.
+                {groupName: "week", dimension: valueByTimeUnit, group: group},
+                // group and dimension comes from derived metric.
+                {dimension: valueByTimeUnit}
+            ];
 
-            this.makeAdditionalGroups_().forEach(function(g) {
-                graphData_.push([g]);
-            });
+            this.categoryData_ = this.makeCategoryGroups();
 
-            this.graphData_ = graphData_;
-            
+            this.tableData_ = this.makeTableGroup();
         },
 
-        makeMainMetrics_: function() {
+        makeCountMetric: function(name) {
+
+            function reduceInitial() { return 0; }
+            function reduceAdd(p, v) { return p += 1; }
+            function reduceRemove(p, v) { return p -= 1; }
+
+            return {
+                name: name,
+                reduceInitial: reduceInitial, reduceAdd: reduceAdd, reduceRemove: reduceRemove,
+                valueAccessor : function (d) { return d.value; }
+            }
+        },
+
+        makeSumMetric: function(name, extractValue) {
+            function reduceInitial() { return 0; }
+            function reduceAdd(p, d) { return p += extractValue(d); }
+            function reduceRemove(p, d) { return p -= extractValue(d); }
+
+            return {
+                name: name,
+                reduceInitial: reduceInitial, reduceAdd: reduceAdd, reduceRemove: reduceRemove,
+                valueAccessor : function(d) { return d.value; }
+            }
+        },
+
+        makeBaseMetrics: function() {
 
             function reduceInitial() {
                 return {
@@ -303,8 +332,8 @@
 
             return {
                 all: function() {
-
-                    var metric = model.graphData()[0][0];
+                    
+                    var metric = model.timelineData()[0];
                     
                     var raw = [];
                     metric.group.all().forEach(function (d) {
@@ -317,11 +346,7 @@
             }
         },
 
-
-
-        makeDerivedMetrics_: function() {
-
-            var model = this;
+        makeLinearRegressionDerivedMetric: function() {
 
             var regression_group = this.makeDerivedMetricGroup_(function(data) {
                 data.forEach(function(d) { d[0] = d[0].getTime(); });
@@ -330,18 +355,28 @@
                 });
             });
 
+            return {name: "Linear regression", group: regression_group};
+        },
+
+        makeCumulativeDerivedMetric: function() {
+
             var cumulative_group = this.makeDerivedMetricGroup_(function(data) {
                 var total = 0;
                 data.forEach(function(d) {
                     total += d[1];
-                    d[1] = total
+                    d[1] = total;
                 });
-                return data;    
+                return data;
             });
 
-            var average_group = this.makeDerivedMetricGroup_(function(data) {
-                var win = 4;
+            return {name: "Cumulative", group: cumulative_group};
+        },
 
+        makeAverageDerivedMetric: function(win) {
+
+            win = win || 4;
+            var average_group = this.makeDerivedMetricGroup_(function(data) {
+            
                 for (i = data.length - 1; i - win + 1 >= 0; --i) {
                     var sum = 0.0;
                     var j;
@@ -353,10 +388,19 @@
                 return data;
             });
 
+            return {name: "Smoothed (" + win + "-week average)", group: average_group};
+        },
+
+        makeGaussianDerivedMetric: function(degree) {
+
+            degree = degree || 4;
+
+            var model = this;
+
             var smooth_group = {
                 all: function() {
 
-                    var metric = model.graphData()[0][0];
+                    var metric = model.timelineData()[0];
                     
                     var raw = [];
                     metric.group.all().forEach(function (d) {
@@ -385,27 +429,33 @@
                     }
 
                     var raw2 = raw.map(function(d) { return d[1]; });
-                    raw2 = smooth(raw2, 4);
+                    raw2 = smooth(raw2, degree);
 
                     var i;
                     var result = []
                     for (i = 0; i < raw2.length; ++i) {
-                        result.push({key: raw[i + 5][0], value: raw2[i]});
+                        result.push({key: new Date(raw[i + degree - 1][0]), value: raw2[i]});
                     }
                     
                     return result;
                 }
             };
 
+            var w = degree * 2 - 1;
+            return {name: "Smoothed (" + w + "-week gaussian)", group: smooth_group};
+        },
+
+        makeDerivedMetrics: function() {
+
             return [
-                {name: "Linear regression", group: regression_group},
-                {name: "Cumulative", group: cumulative_group},
-                {name: "Smooth - 4-week average", group: average_group},
-                {name: "Smooth - 7-week gaussian", group: smooth_group}
+                this.makeLinearRegressionDerivedMetric(),
+                this.makeCumulativeDerivedMetric(),
+                this.makeAverageDerivedMetric(),
+                this.makeGaussianDerivedMetric()
             ]
         },
 
-        makePerDayOfWeekGroup_: function() {
+        makePerDayOfWeekGroup: function() {
 
             var perDayOfWeek = this.crf.dimension(function(d) {
                 return moment(d.t).isoWeekday();
@@ -423,7 +473,7 @@
             };
         },
 
-        makePerHourGroup_: function() {
+        makePerHourGroup: function() {
             var perHour = this.crf.dimension(function(d) {
                 var h = d.t.getHours();
                 if (h < 6)
@@ -439,12 +489,21 @@
             return {groupName: "Time of day", dimension: perHour, group: perHour.group()};
         },
 
-        makeAdditionalGroups_: function() {
+        makeCategoryGroups: function() {
 
             return [
-                this.makePerDayOfWeekGroup_(),
-                this.makePerHourGroup_()              
+                this.makePerDayOfWeekGroup(),
+                this.makePerHourGroup()
             ];
+        },
+
+        makeTableGroup: function() {
+            var dimension = this.crf.dimension(function(d) { return d.name; });
+            return {
+                groupName: "Name",
+                dimension: dimension,
+                group: dimension.group()
+            }
         },
 
         computeRange: function(amount, unit) {
@@ -474,11 +533,26 @@
             this.$element.addClass("la");
             this.options = options || {}
             _.defaults(this.options, {
-                template: "lean-analytics.html",
                 marginLeft: 40
             });
 
-            this.charts = [];
+            if (!this.options.template) {
+                // Try to find path to lean analytics script, and infer template from that.
+                var template = "lean-analytics.html";
+                var $scripts = $('script[src*="lean-analytics"]');
+                if ($scripts.length == 1) {
+                    var src = $scripts.attr('src');
+                    var idx = src.lastIndexOf('/');
+                    if (idx != -1) {
+                        template = src.substring(0, idx + 1) + template;
+                    }
+                }
+
+                this.options.template = template;
+            }
+
+            this.timelineCharts = [];
+            this.categoryCharts = [];
 
             model.on("changed:state", this.update, this);
             this.update();
@@ -500,20 +574,41 @@
                 return;
             }
 
-            if (this.$progress == undefined) {
-                var $progressBlock = $("\
-                <div class='progress'>\
-                    <div>Loading data</div>\
-                    <div class='progress-bar-background'>\
-                        <div class='progress-bar' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100'>\
-                        </div>\
-                    </div>\
-                </div>");
-                this.$element.append($progressBlock);
-                this.$progress = $progressBlock.find(".progress-bar");
-            }
+            var error = this.model.error();
+            if (error) {
+                if (this.$errorMessage == undefined) {
+                    this.$errorMessage = $("\
+                        <div class='error'><p class='bg-danger'><b>Could not load data</b>: <span></span></p></div>\
+                        ");
+                    this.$element.append(this.$errorMessage);
+                }
 
-            this.$progress.css('width', this.model.loadedPercentage() + '%');            
+                this.$errorMessage.find('span').text(error);
+                if (this.$progress) {
+                    this.$progress.hide();
+                }
+            }
+            else {
+
+                if (this.$progress == undefined) {
+                    this.$progress = $("\
+                    <div class='progress'>\
+                        <div>Loading data</div>\
+                        <div class='progress-bar-background'>\
+                            <div class='progress-bar' role='progressbar' aria-valuenow='60' aria-valuemin='0' aria-valuemax='100'>\
+                            </div>\
+                        </div>\
+                    </div>");
+                    this.$element.append(this.$progress);                    
+                }
+
+                if (this.$error) {
+                    this.$error.hide();
+                }
+                this.$progress.show();
+                var bar = this.$progress.find(".progress-bar");
+                bar.css('width', this.model.loadedPercentage() + '%');            
+            }
             
         },
 
@@ -587,34 +682,37 @@
 
         updateCharts: function() {
 
-            var data = this.model.graphData();
-
-            if (data.length != this.charts.length)
-                throw "Different number of charts in model and view";
-
-            // FIXME: don't special-case first. Just match everything.
-            //this.mainChart.dimension(data[0][0].dimension);
-            //this.mainChart.group(data[0][0].group);
-
-            this.updateChart(this.charts[0][0], data[0][0], this.dateFormatter);
-            this.updateChart(this.charts[0][1], data[0][1], this.dateFormatter);
-
             var i;
-            for (i = 1; i < data.length; ++i) {
-                var g = data[i][0];
-                this.updateChart(this.charts[i][0], g);
 
-                var $div = this.charts[i][0].$container;
-                $div.find("span.secondary-chart-title").text(g.groupName);
-                $div.find("span.secondary-chart-subtitle").text(this.capitalize("Total " + g.metricName + " by " + g.groupName));
+            var timelineData = this.model.timelineData();
+            if (timelineData.length != this.timelineCharts.length)
+                throw "Different number of timeline charts in model and view";
 
+            for (i = 0; i < timelineData.length; ++i) {
+                this.updateChart(this.timelineCharts[i], timelineData[i], this.dateFormatter);
             }
+
+            var categoryData = this.model.categoryData();
+            if (categoryData.length != this.categoryCharts.length)
+                throw "Different number of category charts in model and view";
+
+            for (i = 0; i < categoryData.length; ++i) {
+
+                var d = categoryData[i];
+                var c = this.categoryCharts[i];
+                this.updateChart(c, d)
+
+                var $div = c.$container;
+                $div.find("span.secondary-chart-title").text(d.groupName);
+                $div.find("span.secondary-chart-subtitle").text(this.capitalize("Total " + d.metricName + " by " + d.groupName));
+            }
+
         },
 
         makeGraphs_: function(model) {
             
             var mainChart = this.mainChart = dc.compositeChart(this.$element.find("#primary")[0]);
-            var mainMetricChart;
+            var baseMetricChart;
             var derivedMetricChart;
 
             var $rangeSelector = this.$element.find("#range-selector");
@@ -664,7 +762,7 @@
             .width(1140)
             .height(400)
             .dimension(model.valueByTimeUnit)
-            .margins({top: 10, right: 10, bottom: 30, left: this.options.marginLeft})
+            .margins({top: 10, right: 0, bottom: 30, left: this.options.marginLeft})
             .x(d3.time.scale().domain(model.range()).nice(d3.time.day))
             .xUnits(d3.time.weeks)        
             //.y(d3.scale.sqrt())
@@ -674,7 +772,7 @@
             .legend(dc.legend().x(80).y(20).itemHeight(13).gap(5))
             .renderHorizontalGridLines(true)
             .compose([
-                mainMetricChart = 
+                baseMetricChart = 
                 dc.barChart(mainChart)
                 .dimension(model.valueByTimeUnit)
                 .colors('steelblue')
@@ -688,16 +786,15 @@
             .brushOn(false)
             ;
 
-            this.charts.push([mainMetricChart, derivedMetricChart]);
-
+            this.timelineCharts.push(baseMetricChart, derivedMetricChart);
 
             mainChart.xAxis().tickFormat(d3.time.format("%Y-%m-%d"))
 
             this.initializeDropdown(
-                this.$element.find("#main-metric-selector"),
-                model.mainMetrics(),
-                model.mainMetric(),
-                function(d) { model.mainMetric(d); });
+                this.$element.find("#base-metric-selector"),
+                model.baseMetrics(),
+                model.baseMetric(),
+                function(d) { model.baseMetric(d); });
 
             this.initializeDropdown(
                 this.$element.find("#derived-metric-selector"),
@@ -705,10 +802,8 @@
                 model.derivedMetric(),
                 function(d) { model.derivedMetric(d); });
 
-            model.graphData().slice(1).forEach(function(g) {
-
-                g = g[0];
-
+            model.categoryData().forEach(function(g) {
+                
                 var $secondary = $(this.$element.find("#secondary")[0]);
 
                 var useLinearChart = true;
@@ -718,19 +813,25 @@
 
                 if (useLinearChart) {
 
-                    var $div = $("<div class='col-lg-12'><span class='secondary-chart-title'></span> <span class='secondary-chart-subtitle'></span><div style='height: 70px'></div></div>");
+                    var $div = $("<div class='col-lg-12'><span class='secondary-chart-title'></span> <span class='secondary-chart-subtitle'></span>  <a class='reset pull-right' style='display: none;'>Clear filters</a></div></div>");
                     $secondary.append($div);
 
-                   chart = unrolledPieChart($div.children('div')[0]);
+                   chart = unrolledPieChart($div[0]);
                    chart.$container = $div;
                    chart.cap(10);
 
                    chart.elasticX(true)
-                   .width(1140).height(65)
-                   .margins({top: 10, right: 10, bottom: 30, left: this.options.marginLeft});
+                   .width(1140).height(35).fixedBarHeight(20)
+                   .margins({top: 10, right: 0, bottom: 30, left: this.options.marginLeft});
+
+                   $div.find("a").click(function() {
+                        chart.filterAll();
+                        dc.redrawAll();
+                   });
 
                 } else {
 
+                    // Note: this branch is not used right now, and probably won't work.
                     var $div = $("<div class='col-lg-4'><span class='secondary-chart-title'></span> <span class='secondary-chart-subtitle'></span><div style='height: 200px'></div></div>");
                     $secondary.append($div);
 
@@ -742,7 +843,7 @@
                     .margins({top: 10, right: 10, bottom: 30, left: this.options.marginLeft});
                 }
                 
-                this.charts.push([chart]);
+                this.categoryCharts.push(chart);
             }.bind(this));
 
             var View = this;
@@ -758,7 +859,7 @@
 
             this.updateCharts();
 
-            this.listenTo(this.model, 'change:mainMetric change:derivedMetric', function() {
+            this.listenTo(this.model, 'change:baseMetric change:derivedMetric', function() {
                 this.updateCharts();
                 dc.renderAll();
             });
@@ -768,17 +869,26 @@
 
         },
 
-        updateSecondaryChartTitle: function(chart, chartData) {
-
-        },
-
         updateTable: function() {
 
-            var data = this.model.topEntries(40);
-            var table = d3.select(this.$element.find('#table')[0]);
+            var tableData = this.model.tableData();
+            var data = tableData.group.top(40);
+            var va = tableData.valueAccessor;
+            // crossfilter removes elements from groups when filtering, but does not remove
+            // the grops. Further, with floating point filtering out can result in value close
+            // to zero, but not quite zero. Filter out such useless groups.
+            data = data.filter(function(d) { return Math.abs(va(d)) > 0.00001; })
 
-            var thead = table.select("thead");
-            thead.select("th").text(this.model.mainMetric().name);
+            var div = this.$element.find('#table')[0]
+            var $div = $(div);
+            $div.find("span.table-title").text(tableData.groupName);
+            $div.find("span.table-subtitle").text(this.capitalize("Total " + tableData.metricName + " by " + tableData.groupName));
+
+            var table = d3.select(div);
+            table.select("table").style("margin-left", this.options.marginLeft + "px");
+
+            //var thead = table.select("thead");
+            //thead.select("th").text(tableData.metricName);
             var tbody = table.select("tbody");
  
             var rows = tbody.selectAll("tr").data(data);
@@ -792,8 +902,8 @@
             });
 
 
-            var accessor = this.model.mainMetric().valueAccessor;
-            var formatter = this.model.mainMetric().valueFormatter || this.defaultValueFormatter;
+            var accessor = this.model.baseMetric().valueAccessor;
+            var formatter = this.model.baseMetric().valueFormatter || this.defaultValueFormatter;
             if (1) {
                 // Using of function when calling data is documented to
                 // get hold of data elements from the higher level groups,
