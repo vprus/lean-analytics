@@ -111,8 +111,13 @@ UPC.unrolledPieChart = function (parent, chartGroup) {
     function drawChart() {
         _rowData = _chart.data();
 
+        /* For now, don't draw axis at all, since it's often confusing.
+           In future, we'd want to optionally sort elements by value, and show
+           percentages at the end of each element.
         drawAxis();
         drawGridLines();
+        */
+        calculateAxisScale();
 
         var rows = _g.selectAll("g." + _rowCssClass)
             .data(_rowData);
