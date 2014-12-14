@@ -551,7 +551,7 @@
                 this.options.template = template;
             }
 
-            this.charts = [];
+            this.timelineCharts = [];
             this.categoryCharts = [];
 
             model.on("changed:state", this.update, this);
@@ -682,16 +682,20 @@
 
         updateCharts: function() {
 
-            // FIXME: charts->timelineCharts and check lenghts.
+            var i;
+
             var timelineData = this.model.timelineData();
-            this.updateChart(this.charts[0][0], timelineData[0], this.dateFormatter);
-            this.updateChart(this.charts[0][1], timelineData[1], this.dateFormatter);
+            if (timelineData.length != this.timelineCharts.length)
+                throw "Different number of timeline charts in model and view";
+
+            for (i = 0; i < timelineData.length; ++i) {
+                this.updateChart(this.timelineCharts[i], timelineData[i], this.dateFormatter);
+            }
 
             var categoryData = this.model.categoryData();
             if (categoryData.length != this.categoryCharts.length)
                 throw "Different number of category charts in model and view";
 
-            var i;
             for (i = 0; i < categoryData.length; ++i) {
 
                 var d = categoryData[i];
@@ -782,8 +786,7 @@
             .brushOn(false)
             ;
 
-            this.charts.push([baseMetricChart, derivedMetricChart]);
-
+            this.timelineCharts.push(baseMetricChart, derivedMetricChart);
 
             mainChart.xAxis().tickFormat(d3.time.format("%Y-%m-%d"))
 
@@ -863,10 +866,6 @@
 
        
             dc.renderAll();
-
-        },
-
-        updateSecondaryChartTitle: function(chart, chartData) {
 
         },
 
