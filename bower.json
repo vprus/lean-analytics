@@ -33,12 +33,12 @@
     "underscore": "~1.7.0",
     "backbone": "~1.1.2",
     "d3": "~3.4.13",
-    "dc.js": "https://github.com/vprus/dc.js.git#03438fd",
+    "dc.js": "https://github.com/vprus/dc.js.git#7e01af0680fd9ca6599298e0b697797aff64d991",
     "moment": "~2.8.3",
     "jstat": "~1.0.6",
     "regression-js": "https://github.com/Tom-Alexander/regression-js.git#08bf4ee"
   },
   "resolutions": {
-    "dc.js": "03438fd"
+    "dc.js": "7e01af0680fd9ca6599298e0b697797aff64d991"
   }
 }
