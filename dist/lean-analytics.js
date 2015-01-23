@@ -495,7 +495,7 @@
 
             return {
                 groupId: "hour",
-                groupName: "Time of day", 
+                groupName: "Time of day",
                 dimension: perHour, group: perHour.group()
             };
         },
@@ -582,7 +582,7 @@
                         if (that.options.storeState) {
                             that.restoreState();
                         }
-                        dc.renderAll();                   
+                        dc.renderAll();
                     });
                 }
                 // We assume that after model is fully initialized, nothing
@@ -762,11 +762,6 @@
 
                 $input.change(function (e) {
                     if ($input.is(":checked")) {
-
-                        if (that.options.storeState) {
-                            that.setViewStateKey("range", r.name);
-                        }
-
                         model.range(range);
                         // One would have thought elasticX dc option to work fine.
                         // But, crossfilter's groups are not filtered, only entries
@@ -818,14 +813,23 @@
 
             mainChart.xAxis().tickFormat(d3.time.format("%Y-%m-%d"))
 
-            this.initializeDropdown(
-                this.$element.find("#base-metric-selector"),
-                model.baseMetrics(),
-                model.baseMetric(),
-                function(d) { model.baseMetric(d); });
+            var $baseMetricSelector = this.$element.find("#base-metric-selector");
+            if (model.baseMetrics().length < 2) {
+                $baseMetricSelector.hide();
+            } else {
+                this.initializeDropdown(
+                    $baseMetricSelector,
+                    model.baseMetrics(),
+                    model.baseMetric(),
+                    function(d) { model.baseMetric(d); });
+            }
 
+            var $derivedMetricSelector = this.$element.find("#derived-metric-selector");
+            if (model.derivedMetrics().length < 2) {
+                this.$element.find("#derived-metric-selector").hide();
+            }
             this.initializeDropdown(
-                this.$element.find("#derived-metric-selector"),
+                $derivedMetricSelector,
                 model.derivedMetrics(),
                 model.derivedMetric(),
                 function(d) { model.derivedMetric(d); });
@@ -925,14 +929,14 @@
         setViewStateKey: function(key, value) {
 
             var uri = URI(window.location.href);
-            var keys = uri.search(true);      
+            var keys = uri.search(true);
 
             if (value) {
                 keys[key] = value;
             } else {
                 delete keys[key];
             }
-            
+
             uri.search(keys);
 
             if (window.history) {
@@ -1020,6 +1024,7 @@
             // However, we need to stop our event handler from getting
             // invoked as if it's user-initiated filter change.
             that.blockFilterEvents = true;
+
 
             model.categoryData().forEach(function(category, index) {
 

@@ -813,14 +813,23 @@
 
             mainChart.xAxis().tickFormat(d3.time.format("%Y-%m-%d"))
 
-            this.initializeDropdown(
-                this.$element.find("#base-metric-selector"),
-                model.baseMetrics(),
-                model.baseMetric(),
-                function(d) { model.baseMetric(d); });
+            var $baseMetricSelector = this.$element.find("#base-metric-selector");
+            if (model.baseMetrics().length < 2) {
+                $baseMetricSelector.hide();
+            } else {
+                this.initializeDropdown(
+                    $baseMetricSelector,
+                    model.baseMetrics(),
+                    model.baseMetric(),
+                    function(d) { model.baseMetric(d); });
+            }
 
+            var $derivedMetricSelector = this.$element.find("#derived-metric-selector");
+            if (model.derivedMetrics().length < 2) {
+                this.$element.find("#derived-metric-selector").hide();
+            }
             this.initializeDropdown(
-                this.$element.find("#derived-metric-selector"),
+                $derivedMetricSelector,
                 model.derivedMetrics(),
                 model.derivedMetric(),
                 function(d) { model.derivedMetric(d); });
