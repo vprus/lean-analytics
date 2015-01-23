@@ -2,8 +2,8 @@
   
     if (typeof define === 'function' && define.amd) {
         // AMD case: not actually tested yet.
-        define(['exports', 'underscore', 'backbone', 'jquery', 'moment', 'crossfilter', 'dc.js', 'regression', 'unrolled-pie-chart'], function(exports, _, Backbone, $, moment, crossfilter, dc, regression, upc) {
-            factory(root, exports, _, Backbone, $, moment, crossfilter, dc, regression, upc.unrolledPieChart);
+        define(['exports', 'underscore', 'backbone', 'jquery', 'moment', 'crossfilter', 'dc.js', 'regression', 'unrolled-pie-chart', 'URI'], function(exports, _, Backbone, $, moment, crossfilter, dc, regression, upc) {
+            factory(root, exports, _, Backbone, $, moment, crossfilter, dc, regression, upc.unrolledPieChart, URI);
         });
     }
     else if (typeof exports !== 'undefined') {
@@ -16,19 +16,20 @@
         var dc = require('dc.js');
         var regression = require('regression-js');
         var upc = require('./unrolled-pie-chart.js').unrolledPieChart;
+        var uri = require('uri.js');
 
         // Bootstrap JS uses window globals no matter what, so expose
         // JQuery
         window.$ = window.jQuery = $
         require('bootstrap');
 
-        factory(root, exports, _, Backbone, $, moment, crossfilter, dc, regression, upc);
+        factory(root, exports, _, Backbone, $, moment, crossfilter, dc, regression, upc, uri);
     } else {
         // Browser global
-        root.LeanAnalytics = factory(root, {}, root._, root.Backbone, root.$, root.moment, root.crossfilter, root.dc, root.regression, root.dc.unrolledPieChart);
+        root.LeanAnalytics = factory(root, {}, root._, root.Backbone, root.$, root.moment, root.crossfilter, root.dc, root.regression, root.dc.unrolledPieChart, root.URI);
     }
 
-})(this, function(root, LA, _, Backbone, $, moment, crossfilter, dc, regression, unrolledPieChart) {
+})(this, function(root, LA, _, Backbone, $, moment, crossfilter, dc, regression, unrolledPieChart, URI) {
 
     var Base = function() {}
     _.extend(Base.prototype, Backbone.Events);
@@ -258,6 +259,11 @@
             ];
 
             this.categoryData_ = this.makeCategoryGroups();
+            this.categoryData_.forEach(function(d) {
+                if (!d.groupId) {
+                    d.groupId = d.groupName;
+                };
+            });
 
             this.tableData_ = this.makeTableGroup();
         },
@@ -466,6 +472,7 @@
             var days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
             return {
+                groupId: "day",
                 groupName: "Day of week", dimension: perDayOfWeek, group: perDayOfWeek.group(),
                 keyFormatter: function(k) {
                     return days[k-1];
@@ -486,7 +493,11 @@
                     return "Evening";
             });
 
-            return {groupName: "Time of day", dimension: perHour, group: perHour.group()};
+            return {
+                groupId: "hour",
+                groupName: "Time of day",
+                dimension: perHour, group: perHour.group()
+            };
         },
 
         makeCategoryGroups: function() {
@@ -560,13 +571,18 @@
 
         update: function() {
 
+            var that = this;
+
             if (this.model.dataReady())            
             {
                 if (!this.graphsCreated_) {
                     this.graphsCreated_ = true;
-                    var View = this;                
                     this.$element.load(this.options.template, function() {
-                        View.makeGraphs_(View.model);
+                        that.makeGraphs_(that.model);
+                        if (that.options.storeState) {
+                            that.restoreState();
+                        }
+                        dc.renderAll();
                     });
                 }
                 // We assume that after model is fully initialized, nothing
@@ -576,6 +592,11 @@
 
             var error = this.model.error();
             if (error) {
+
+                if (error instanceof XMLHttpRequest) {
+                    error = error.statusText;
+                }
+
                 if (this.$errorMessage == undefined) {
                     this.$errorMessage = $("\
                         <div class='error'><p class='bg-danger'><b>Could not load data</b>: <span></span></p></div>\
@@ -711,6 +732,8 @@
 
         makeGraphs_: function(model) {
             
+            var that = this;
+
             var mainChart = this.mainChart = dc.compositeChart(this.$element.find("#primary")[0]);
             var baseMetricChart;
             var derivedMetricChart;
@@ -738,7 +761,7 @@
                     $input.prop('checked', true);
 
                 $input.change(function (e) {
-                    if ($input.is(":checked")) {                        
+                    if ($input.is(":checked")) {
                         model.range(range);
                         // One would have thought elasticX dc option to work fine.
                         // But, crossfilter's groups are not filtered, only entries
@@ -842,6 +865,10 @@
                    .width(250).height(200)      
                     .margins({top: 10, right: 10, bottom: 30, left: this.options.marginLeft});
                 }
+
+                if (this.options.storeState) {
+                    this.setFilteredHandler(chart);
+                }
                 
                 this.categoryCharts.push(chart);
             }.bind(this));
@@ -863,10 +890,51 @@
                 this.updateCharts();
                 dc.renderAll();
             });
+        },
 
-       
-            dc.renderAll();
+        setFilteredHandler: function(chart) {
 
+            var that = this;
+            chart.on('filtered', function(chart, filter) {
+
+                if (that.blockFilterEvents)
+                    return;
+
+                var chartIndex = that.categoryCharts.indexOf(chart);
+                if (chartIndex == -1)
+                    return;
+
+                var key = that.model.categoryData()[chartIndex].groupId;
+                var value = null;
+
+                var f = chart.filters();
+                if (f && f.length > 0) {
+                    value = f.join('-');
+                }
+
+                that.setViewStateKey(key, value);
+
+            });
+        },
+
+        setViewStateKey: function(key, value) {
+
+            var uri = URI(window.location.href);
+            var keys = uri.search(true);
+
+            if (value) {
+                keys[key] = value;
+            } else {
+                delete keys[key];
+            }
+
+            uri.search(keys);
+
+            if (window.history) {
+                window.history.pushState({}, "", uri.resource());
+            } else {
+                window.location.search = uri.toString();
+            }
         },
 
         updateTable: function() {
@@ -931,6 +999,44 @@
             }
    
             rows.exit().remove();
+        },
+
+        restoreState: function(s) {
+
+            var that = this;
+
+            var uri = URI(window.location.href);
+            var keys = uri.search(true);
+
+            // We'll set filters by calling methods on charts,
+            // not on the model, since dc.js base-mixin.filter does
+            // a lot of things that won't be done if we call
+            // dimension.filter.
+            // However, we need to stop our event handler from getting
+            // invoked as if it's user-initiated filter change.
+            that.blockFilterEvents = true;
+
+
+            model.categoryData().forEach(function(category, index) {
+
+                var id = category.groupId;
+                var s = keys[id];
+                if (s) {
+                    if (s[s.length-1] == '/') {
+                        s = s.substr(0, s.length-1);
+                    }
+                    var values = s.split('-');
+                    category.dimension.filter(values);
+
+
+                    values.forEach(function(v) {
+                        that.categoryCharts[index].filter(v);
+                    });
+                }
+
+            });
+
+            that.blockFilterEvents = false;
         },
 
         capitalize: function(s) {

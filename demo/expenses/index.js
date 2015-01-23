@@ -31,7 +31,12 @@ var Model = LeanAnalytics.Model.extend({
         });
 
         return [
-            {groupName: "Category", dimension: perCategory, group: perCategory.group()},
+            {
+                groupId: "category",
+                groupName: "Category",
+                dimension: perCategory,
+                group: perCategory.group()
+            },
             this.makePerDayOfWeekGroup()
         ];
     },
@@ -39,6 +44,8 @@ var Model = LeanAnalytics.Model.extend({
 });
 
 var model = new Model();
-var view = new LeanAnalytics.View('#lean-analytics', model);
+var view = new LeanAnalytics.View('#lean-analytics', model, {
+    storeState: true
+});
 
 model.load("/lean-analytics/demo/expenses/expenses.json");
